@@ -1,15 +1,19 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Team Obsidian</title>
+    <title> The Team </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <meta charset="utf-8">
+
+    <!--webgl deps-->
+    <script src="webgl rendering/gl-matrix-min.js"></script>
+    <script src="webgl rendering/wavefront-obj-parser.js"></script>
+    <script src="webgl rendering/main.js"></script>
+
 </head>
 
-<body>
-
+<body onload="webGLStart()">
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <a class="navbar-brand" href="#">Team Obsidian</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
@@ -18,10 +22,10 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item active">
-                    <a class="nav-link" href="index.html">Home<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="index.html">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="team.html">About</a>
+                    <a class="nav-link" href="team.html">About<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="demo.html">Product</a>
@@ -32,25 +36,15 @@
 
     <div class="container">
         <div class="row">
-            <div class="col-sm">
-                <h3> Problem/Customer Definition </h3>
-                <h5> Societal Problem Defined - Newcoming ODU students lack a sense of direction due to a lack of knowledge of the campus layout. </h5>
-                <div class="embed-responsive embed-responsive-16by9">
-                </div>
-            </div>
-            <div class="col-sm">
-
-                <h3>Problem Characteristics Identified/Supported</h3>
-                <h5> Newcomers to campus do not know the layout of campus. Including visitors. Identification of Customer Base - ODU students , Staff/Faculty, and Visitors Process Flow for Problem in Customer Domain - </h3>
-            </div>
-            <div class="col-sm">
+            <div class="col">
+                <canvas id="canvas" width="700" height="700"></canvas>
             </div>
         </div>
     </div>
-
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
 </body>
+
 
 </html>
