@@ -54,9 +54,9 @@ p {
 }
 
 img {
-	max-width: 100%;
+	width: 450px;
+	height: 450px;
 }
-
 input:focus,
 select:focus,
 button:focus,
@@ -1693,3 +1693,4 @@ ol {
 		font-size: 33px;
 	}
 }
+
