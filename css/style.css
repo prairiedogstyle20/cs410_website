@@ -1753,4 +1753,7 @@ ol {
 .portrait {
     width: 250px;
     height: 250px;
+    padding: 1px;
+    border: 1px solid #2665c9;
+    background-color: rgb(189, 189, 56);
 }
