@@ -540,6 +540,7 @@ ol {
     padding-top: 5px;
     color: #fff;
     display: inline-block;
+    margin: 5px;
 }
 
 .search-top {
@@ -1765,4 +1766,11 @@ ol {
 
 #ODUsign {
     max-width: 100%;
+}
+
+.header img {
+    float: left;
+    width: 125px;
+    height: 125px;
+    background: #555;
 }
