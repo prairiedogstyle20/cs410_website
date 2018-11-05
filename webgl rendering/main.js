@@ -56,8 +56,8 @@ var context = {
         console.log("getting webGL context")
         try {
             this.gl = canvas.getContext("webgl2");
-            this.gl.viewportWidth = canvas.width;
-            this.gl.viewportHeight = canvas.height;
+            this.gl.viewportWidth = canvas.clientWidth;
+            this.gl.viewportHeight = canvas.clientHeight;
             //this.gl.viewport(0, 0, canvas.width, canvas.height);
             console.log(this.gl.getParameter(this.gl.VIEWPORT));
         } catch (e) {
@@ -199,6 +199,8 @@ var count = 0;
 
 function drawScene(context) {
     var gl = context.gl;
+    gl.viewportWidth = context.canvas.width = context.canvas.clientWidth;
+    gl.viewportHeight = context.canvas.height = context.canvas.clientHeight;
     gl.viewport(0, 0, gl.viewportWidth, gl.viewportHeight);
 
     gl.clear(gl.COLOR_BUFFER_BIT | gl.DEPTH_BUFFER_BIT);
@@ -209,7 +211,7 @@ function drawScene(context) {
     mat4.rotate(model, model, count, [0, 1, 0]);
     mat4.scale(model, model, [.5, .5, .5]);
     var projection = mat4.create();
-    mat4.perspective(projection, 45. * (Math.PI / 180.), gl.viewportWidth / gl.viewportHeight, .1, 10);
+    mat4.perspective(projection, 45. * (Math.PI / 180.), (1. * (gl.viewportWidth)) / (1. * (gl.viewportHeight)), .1, 10);
     var view = mat4.create();
     mat4.lookAt(view, [1, 1, 3], [0, 0, 0], [0, 1, 0]);
 
