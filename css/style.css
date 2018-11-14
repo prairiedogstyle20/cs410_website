@@ -1774,3 +1774,9 @@ ol {
     height: 125px;
     background: #555;
 }
+
+.align-center {
+    margin-left: auto !important;
+    margin-right: auto !important;
+    text-align: center !important;
+}
